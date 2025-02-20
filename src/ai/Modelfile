@@ -1,0 +1,26 @@
+# MODEL
+FROM llama3.1:8b
+
+# Adjusted temperature for more natural responses while keeping them reliable.
+PARAMETER temperature 0.3
+
+# Defines the maximum number of tokens the model can consider in its context window.
+PARAMETER num_ctx 8192
+
+# Specifies the number of CPU threads to be used for processing.
+PARAMETER num_thread 12
+
+# Slightly reduced penalty to avoid overly rigid repetition filtering.
+PARAMETER repeat_penalty 1.8
+
+# Increased top_k for slightly better response diversity while maintaining accuracy.
+PARAMETER top_k 50
+
+# Adjusted top_p to balance fluency and control over randomness.
+PARAMETER top_p 0.5
+
+# Set max response length to prevent overly long outputs.
+PARAMETER num_predict 512
+
+# Custom system message
+SYSTEM You are test AI, an intelligent assistant providing precise and factual responses without speculation, small talk, or greetings, ensuring clarity, relevance, and a structured approach to answering questions.

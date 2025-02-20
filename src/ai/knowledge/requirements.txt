@@ -1,0 +1,9 @@
+chromadb 
+ollama 
+pypdf 
+tiktoken
+unidecode
+scikit-learn
+plotly
+pandas
+dash
